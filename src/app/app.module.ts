@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { AuthProvider } from '../providers/auth/auth';
 import { SignupPage } from '../pages/signup/signup';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SignupPage } from '../pages/signup/signup';
   imports: [
     BrowserModule,
     NgxErrorsModule,
+    ComponentsModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
