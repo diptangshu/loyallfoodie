@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
 import { HomePage } from '../home/home';
@@ -30,7 +30,7 @@ export class SignupPage {
     console.log('ionViewDidLoad SignupPage');
   }
 
-  signup() {
+  signUp() {
     let data = this.form.value;
 
     let credentials = {
@@ -38,7 +38,7 @@ export class SignupPage {
       password: data.password
     };
 
-    this.auth.signup(credentials).then(
+    this.auth.signUp(credentials).then(
       () => this.navCtrl.setRoot(HomePage),
       error => this.signupError = error.message
     );

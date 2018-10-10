@@ -15,8 +15,20 @@ export class AuthProvider {
     return this.afAuth.auth.signInWithEmailAndPassword(credentials.email, credentials.password);
   }
 
-  signup(credentials) {
+  signUp(credentials) {
     return this.afAuth.auth.createUserWithEmailAndPassword(credentials.email, credentials.password);
+  }
+
+  signOut(): Promise<void> {
+    return this.afAuth.auth.signOut();
+  }
+
+  get authenticated(): boolean {
+    return this.user != null;
+  }
+
+  getEmail() {
+    return this.user && this.user.email;
   }
 
 }
