@@ -3,14 +3,16 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>
-      Home
+    <ion-title class="city-current">
+      Kolkata <ion-icon name="locate"></ion-icon>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <points-display></points-display>
-  <store-listing heading="Near to you"></store-listing>
-  <store-listing heading="Popular choices"></store-listing>
+  <points-display [current]="1280" [target]="3000" [tier]="2"></points-display>
+  
+  <store-listing heading="Near to you" [stores]="storesByDistance"></store-listing>
+  
+  <store-listing heading="Popular choices" [stores]="storesByRating"></store-listing>
 </ion-content>

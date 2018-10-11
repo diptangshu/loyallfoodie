@@ -1,3 +1,20 @@
 points-display {
+    .progress-wrapper {
+        position: relative;
+        margin: 20px auto;
+    }
+    round-progress {
+        margin: auto;
+    }
+    .points {
+        position: absolute;
+        text-align: center;
+        font-weight: bold;
+    }
 
+    .points { color: color($colors, primary); }
+
+    .bronze { color: color($colors, bronze); }
+    .silver { color: color($colors, silver); }
+    .gold { color: color($colors, gold); }
 }

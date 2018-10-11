@@ -1,4 +1,7 @@
-<!-- Generated template for the PointsDisplayComponent component -->
-<div>
-  {{text}}
+<div class="progress-wrapper">
+  <div class="points" [ngStyle]="getOverlayStyle()">
+    <h3>{{ current | number }}</h3><small *ngIf="current" [class]="tierName">{{ tierName | uppercase }}</small>
+  </div>
+  <round-progress [color]="tierColor" [current]="current" [max]="target" [radius]="radius" [semicircle]="semicircle"
+    [stroke]="3" background="#efe4c3"></round-progress>
 </div>

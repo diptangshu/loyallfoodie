@@ -1,20 +1,42 @@
 store-listing {
     .heading {
-        padding: 1rem;
+        margin: 0.2rem 1rem;
+        color: color($colors, primary);
+        font-weight: bold;
     }
     ion-card {
         position: relative;
     }
-    .store-distance {
+
+    .store {
+        min-height: 23rem;
+    }
+
+    .distance {
         position: absolute;
         top: 0;
         right: 0;
         padding: 0.25rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: color($colors, light);
     }
-    .store-rating {
+    .rating {
         position: absolute;
         top: 0;
         left: 0;
         padding: 0.25rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: color($colors, light);
+    }   
+
+    .store .name {
+        font-size: 2rem;
+        color: color($colors, secondary);
     }
+
+    .store .address {
+        font-size: 90%;
+        color: color($colors, dark);
+    }
+
 }

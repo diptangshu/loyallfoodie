@@ -15,7 +15,7 @@ export class MyApp {
 
   rootPage: any;
 
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ icon: string, title: string, component: any }>;
 
   constructor(
     private platform: Platform, 
@@ -26,8 +26,7 @@ export class MyApp {
 
     this.initializeApp();
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Login', component: LoginPage } 
+      { icon: 'home', title: 'Home', component: HomePage }
     ];
   }
   

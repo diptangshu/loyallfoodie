@@ -1,21 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'store-listing',
   templateUrl: 'store-listing.html'
 })
-export class StoreListingComponent implements OnInit {
+export class StoreListingComponent {
 
   @Input() heading: string;
-  @Input() stores = [1, 2, 3, 4, 5];
-  
-  numStoresPerView: number;
+  @Input() stores: any[];
 
   constructor() {
   }
-
-  ngOnInit() {
-    this.numStoresPerView = Math.min(this.stores.length, 2);
-  }
-
 }

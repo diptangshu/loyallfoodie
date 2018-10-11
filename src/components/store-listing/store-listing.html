@@ -1,19 +1,15 @@
 <div class="heading">{{ heading }}</div>
 <div>
-  <ion-slides [slidesPerView]="numStoresPerView">
+  <ion-slides [slidesPerView]="2">
 
     <ion-slide *ngFor="let store of stores">
-      <ion-card>
-        <img src="https://www.dummyimage.com/400x200" />
-        <div class="store-rating">3.5</div>
-        <div class="store-distance">2 km</div>
+      <ion-card class="store">
+        <img [src]="store.thumbnail" />
+        <div class="rating">{{ store.rating }} &hearts;</div>
+        <div class="distance">{{ store.distance | distance }}</div>
         <ion-card-content>
-          <ion-card-title>
-            Store Name
-          </ion-card-title>
-          <p>
-            Address 1, Address 2, City, State
-          </p>
+          <ion-card-title class="name">{{ store.name }}</ion-card-title>
+          <p class="address">{{ store.address }}</p>
         </ion-card-content>
       </ion-card>
     </ion-slide>   
