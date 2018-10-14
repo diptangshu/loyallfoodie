@@ -3,15 +3,20 @@
         <ion-toolbar>
             <ion-title *ngIf="auth.getEmail()">{{ auth.getEmail() }}</ion-title>
             <ion-title *ngIf="!auth.getEmail()">Guest</ion-title>
+            <ion-buttons end>
+                <button ion-button icon-only menuClose>
+                    <ion-icon name="close"></ion-icon>
+                </button>
+            </ion-buttons>
         </ion-toolbar>
     </ion-header>
 
     <ion-content>
         <ion-list>
-            <ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
-                <ion-icon [name]="icon" item-start></ion-icon>
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                <ion-icon [name]="p.icon" item-left></ion-icon>
                 {{ p.title }}
-            </ion-item>
+            </button>
 
             <button menuClose ion-item (click)="logout()" *ngIf="auth.authenticated">
                 <ion-icon name="log-out" item-left></ion-icon>

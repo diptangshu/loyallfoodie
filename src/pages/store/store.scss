@@ -1,0 +1,14 @@
+page-store {
+
+    .points, .price {
+        color: color($colors, secondary);
+    }
+
+    .points::before {
+        content: '['
+    }
+
+    .points::after {
+        content: ']'
+    }
+}

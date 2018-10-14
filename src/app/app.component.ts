@@ -26,7 +26,10 @@ export class MyApp {
 
     this.initializeApp();
     this.pages = [
-      { icon: 'home', title: 'Home', component: HomePage }
+      { icon: 'home', title: 'Home', component: HomePage },
+      { icon: 'shirt', title: 'Merchandise', component: HomePage },
+      { icon: 'book', title: 'History', component: HomePage },
+      { icon: 'key', title: 'Account', component: HomePage }
     ];
   }
   

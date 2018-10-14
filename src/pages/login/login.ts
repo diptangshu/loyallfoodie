@@ -47,7 +47,7 @@ export class LoginPage {
         error => this.loginError = error.message);
   }
 
-  signup() {
+  signUp() {
     this.navCtrl.push(SignupPage);
   }
 }

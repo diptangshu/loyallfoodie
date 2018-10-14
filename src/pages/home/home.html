@@ -1,18 +1,25 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="city-current">
-      Kolkata <ion-icon name="locate"></ion-icon>
+    <ion-title>
+      Behala, Kolkata
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="locate"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <points-display [current]="1280" [target]="3000" [tier]="2"></points-display>
+  <points-display [current]="1280" [target]="3000" [tier]="0"></points-display>
   
   <store-listing heading="Near to you" [stores]="storesByDistance"></store-listing>
   
   <store-listing heading="Popular choices" [stores]="storesByRating"></store-listing>
+
+  <ion-spinner name="dots" *ngIf="loading"></ion-spinner>
 </ion-content>

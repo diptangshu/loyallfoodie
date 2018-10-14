@@ -1,9 +1,9 @@
-<div class="heading">{{ heading }}</div>
+<div *ngIf="stores.length" class="heading">{{ heading }}</div>
 <div>
   <ion-slides [slidesPerView]="2">
 
     <ion-slide *ngFor="let store of stores">
-      <ion-card class="store">
+      <ion-card class="store" [navPush]="storePage" [navParams]="store">
         <img [src]="store.thumbnail" />
         <div class="rating">{{ store.rating }} &hearts;</div>
         <div class="distance">{{ store.distance | distance }}</div>

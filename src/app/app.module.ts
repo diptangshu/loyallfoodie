@@ -8,7 +8,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { firebaseConfig } from '../config';
-import { NgxErrorsModule } from '@ultimate/ngxerrors';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,17 +15,18 @@ import { LoginPage } from '../pages/login/login';
 import { AuthProvider } from '../providers/auth/auth';
 import { SignupPage } from '../pages/signup/signup';
 import { ComponentsModule } from '../components/components.module';
+import { StorePage } from '../pages/store/store';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    StorePage
   ],
   imports: [
     BrowserModule,
-    NgxErrorsModule,
     ComponentsModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
@@ -37,7 +37,8 @@ import { ComponentsModule } from '../components/components.module';
     MyApp,
     HomePage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    StorePage
   ],
   providers: [
     StatusBar,

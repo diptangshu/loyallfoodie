@@ -11,6 +11,7 @@ export class HomePage implements OnInit {
 
   storesByDistance = [];
   storesByRating = [];
+  loading = true;
 
 
   constructor(public navCtrl: NavController, private db: AngularFirestore) {
@@ -20,6 +21,7 @@ export class HomePage implements OnInit {
     this.db.collection('/stores').valueChanges().subscribe(stores => {
       this.storesByDistance = _.sortBy(stores, 'distance');
       this.storesByRating = _.orderBy(stores, 'rating', 'desc');
+      this.loading = false;
     });
   }
 
